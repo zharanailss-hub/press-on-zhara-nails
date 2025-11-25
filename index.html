@@ -1,59 +1,266 @@
-<!doctype html>
-<html lang="es"> <head></head> <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Zhara Nails — Imágenes</title>
-    <style>
-        :root { --bg:#fff; --accent:#c94; --muted:#666; --card:#fff; }
-        html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#111;background:linear-gradient(180deg,#fff 0%,#fff7f0 100%);}
-        .wrap{max-width:900px;margin:48px auto;padding:24px;}
-        header{display:flex;align-items:center;gap:16px}
-        img.logo{width:96px;height:96px;object-fit:contain;border-radius:8px;background:#fff;padding:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-        h1{margin:0;font-size:1.4rem}
-        p.lead{margin:6px 0 18px;color:var(--muted)}
-        nav a{display:inline-block;margin-right:12px;color:var(--accent);text-decoration:none;font-weight:600}
-        .panel{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
-        .files{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-        .file{flex:0 0 120px;border-radius:8px;overflow:hidden;background:#fff;border:1px solid #f0e7e7;padding:8px;text-align:center;font-size:0.9rem}
-        .file img{width:100%;height:80px;object-fit:cover;border-radius:6px;margin-bottom:8px}
-        footer{margin-top:18px;color:var(--muted);font-size:0.85rem}
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZharaNails - Uñas Press-On Personalizadas</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #D4AFB9;
+        --secondary-color: #ffd8f3;
+        --background-light: #FFFFFF;
+        --background-dark: #121212;
+        --text-light: #F5F5F5;
+        --text-dark: #694f64;
+      }
     </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "var(--primary-color)",
+              secondary: "var(--secondary-color)",
+              "background-light": "var(--background-light)",
+              "background-dark": "var(--background-dark)",
+              "text-light": "var(--text-light)",
+              "text-dark": "var(--text-dark)",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "1rem",
+              full: "9999px"
+            },
+          },
+        },
+      };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 </head>
-<body>
-    <main class="wrap">
-        <header>
-            <img src="logo_zhara.png" alt="Logo Zhara Nails" class="logo" />
-            <div>
-                <h1>Zhara Nails — Carpeta de imágenes</h1>
-                <p class="lead">Vista rápida de los recursos de imagen y enlaces al sitio.</p>
-                <nav>
-                    <a href="../index.html">Inicio</a>
-                    <a href="../galeria.html">Galería</a>
-                    <a href="../personalizar.html">Personalizar</a>
-                    <a href="../detalle.html">Detalle</a>
-                </nav>
-            </div>
-        </header>
-
-        <section class="panel" aria-label="Imágenes en este directorio">
-            <strong>Imágenes disponibles</strong>
-            <div class="files" role="list">
-                <div class="file" role="listitem">
-                    <img src="/img/logo_aza.png" alt="Logo Zhara Nails" />
-                    <div>logo_zhara.png</div>
-                </div>
-                <!-- Añade más elementos aquí si colocas más imágenes en /img --><div class="absolute inset-0 bg-cover bg-center filter contrast-125 saturate-125" 
-     style='background-image: url("img/logo_aza.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;'>
+<body class="bg-background-light dark:bg-background-dark font-sans text-text-dark dark:text-text-light">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-2">
+<h1 class="text-2xl font-serif text-text-dark dark:text-text-light">ZharaNails</h1>
 </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-xs font-medium tracking-widest uppercase hover:text-primary transition-colors" href="#">Diseños</a>
+<a class="text-xs font-medium tracking-widest uppercase hover:text-primary transition-colors" href="#">Personalizar</a>
+<a class="text-xs font-medium tracking-widest uppercase hover:text-primary transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<<section class="relative h-[calc(100vh-80px)] min-h-[600px] flex items-center justify-center text-center">
+  <!-- Fondo del logo -->
+  <div class="absolute inset-0 bg-cover bg-center filter contrast-125 saturate-125" 
+       style='background-image: url("img/logo_aza.png");
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 100%;
+              height: 100%;'>
+  </div>
 
-            </div>
-        </section>
+  <!-- Capa semitransparente para oscurecer un poco el fondo -->
+  <div class="absolute inset-0 bg-white/30 dark:bg-black/60"></div>
 
-        <footer>
-            Archivo: /img/index.html — usa rutas relativas (../) para enlazar páginas desde la raíz del sitio.
-        </footer>
-    </main>
-</body>
-</html></html>
+  <!-- Contenido encima del fondo -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl mx-auto mt-80">
+<h1 
+  class="text-5xl md:text-6xl lg:text-7xl font-serif mb-4 drop-shadow-lg inline-block px-8 py-3 rounded-full relative overflow-hidden transition-all duration-500"
+  style="color: #ffe799; background: rgba(0, 0, 0, 0.35);">
+  <span class="relative z-10">Belleza al Instante</span>
+  <span class="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-yellow-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700"></span>
+</h1>
+<h4> Azahara San Bartolome Florin
+   </h4>
+<p 
+  class="max-w-xl mx-auto text-base md:text-lg mb-8 text-text-light px-6 py-3 rounded-full inline-block relative overflow-hidden transition-all duration-500"
+  style="background: rgba(0, 0, 0, 0.35); color: #fff;">
+  Descubre la elegancia de las uñas press-on personalizadas. Calidad de salón, en la comodidad de tu hogar.
+  <span class="absolute inset-0 bg-gradient-to-r from-amber-200/40 via-yellow-100/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700"></span>
+</p>
+  ...
+</div>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary/90 transition-all duration-300 text-sm">
+          Explorar diseños
+        </a>
+        <a href="#" class="inline-block bg-text-dark dark:bg-text-light text-background-light dark:text-background-dark font-semibold py-3 px-8 rounded-full hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all duration-300 text-sm">
+          Crea tu diseño
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<section class="py-16 md:py-24">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+      <!-- Columna de texto -->
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-serif text-text-dark dark:text-text-light mb-4">
+          Fácil, Rápido y Espectacular
+        </h2>
+        <p class="text-base text-text-dark/70 dark:text-text-light/70 mb-6">
+          Las uñas personalizadas press-on se aplican en minutos, dándote una manicura perfecta sin salir de casa. Mira lo sencillo que es transformar tu look.
+        </p>
+        <a class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full hover:bg-primary/90 transition-all duration-300 text-sm" href="#">
+          Ver todos los diseños
+        </a>
+      </div>
+
+      <!-- Columna del vídeo (lateral) -->
+      <div class="lg:w-1/2 w-full">
+        <!-- Barra de navegación -->
+        <nav class="mb-4">
+          <a href="#video-section" class="text-blue-500 hover:underline"></a>
+        </nav>
+
+        <!-- Contenedor del vídeo -->
+        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl">
+          <section id="video-section">
+            <iframe 
+              class="w-full h-full object-cover" 
+              src="https://www.youtube.com/embed/SD3xYEQQhj0?autoplay=1&mute=1" 
+              title="Vídeo de YouTube" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </section>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+</section>
+<section class="py-16 md:py-24 bg-secondary dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-serif text-text-dark dark:text-text-light mb-3">Colección Exclusiva</h2>
+<p class="max-w-2xl mx-auto text-base text-text-dark/70 dark:text-text-light/70">Diseños curados para inspirar tu próximo look.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+<div class="group text-center">
+<div class="overflow-hidden rounded-lg mb-4 shadow-md">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFpgCMlglLmpEtpoUBe0pcRfj4_hziGgboc-yR7jnb5BEEbR9nQZd-2e_jFgx1608gEsZSkZTulhVECR_dsCqRsL4jD-u2gOl6soGiGIKF_qw2u-Mne7zJfATzup5TVQ8m15VgUKWgkpexcIAt4ZHuF-iUL4zK1p7bE64WaKXMQQSJ7PmKF6b4vWNX9y_GxpstkjziEcI12D8Qwvkxa4EWqt-L9z7UThLiNu-RpY4R09Q0d-uUbxskI2jpP68HtsjEmy3EPXCr9jc")'></div>
+</div>
+<h3 class="text-xl font-serif text-text-dark dark:text-text-light">Nude &amp; Gold</h3>
+</div>
+<div class="group text-center">
+<div class="overflow-hidden rounded-lg mb-4 shadow-md">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb3dbFiPr9ebvBVeOMKAC4oo_LMCOxqtJh4F27Mwg9a7JVRm7QUZK9IEYpe8axf-TgvC18oIifEi_2scQQLe8S7TpgxmVk2Jojwv02nnRA56MWTbn_sVycJFhg2BfZFphAHEcWUXs8yiEaGfxIJqY40aPIxOXGlzww4gns__45mpB-TwOAbV2JHwl2s953giJaBK20cP5Byjy2Y-pJWDj7HuIfLNPIJJ9cPyx-631ezsDu7G3g1LqH8pYN47uMGs5LM1ofDfX5TTg")'></div>
+</div>
+<h3 class="text-xl font-serif text-text-dark dark:text-text-light">French Moderno</h3>
+</div>
+<div class="group text-center">
+<div class="overflow-hidden rounded-lg mb-4 shadow-md">
+<div class="w-full aspect-[3/4] bg-cover bg-center rounded-lg transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJnLPR3RvKQtsJkFtzJo-DjsKe_DigJN0iqShaIrmb2h2Bd1CwlRzUYUnymPuaNN-qM2OwIGXhSNeWrCFRkJj57adRv-HDomHOQKQU1dOWhvoB2p43RgGzztF9gKHfhPvNvfZBzbRPVvCyC8DVrgMi97VSldi2u6D0thSrH6KDliV2yG4jyhf2B67mM9pVuPF9WBbsh-beUsiD8ey55ga4WyYkk3orqmPv4pzqPHctLCBjbt3pC1Ns9qPIYMHUqRU0KhuWjPOQLyI")'></div>
+</div>
+<h3 class="text-xl font-serif text-text-dark dark:text-text-light">Perlas Delicadas</h3>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-serif text-text-dark dark:text-text-light mb-3">Tu Estilo, Tus Reglas</h2>
+<p class="max-w-2xl mx-auto text-base text-text-dark/70 dark:text-text-light/70">Un proceso simple para unas uñas espectaculares.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center border-2 border-primary rounded-full w-16 h-16 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+</div>
+<h3 class="text-xl font-serif mb-2 text-text-dark dark:text-text-light">1. Elige tu Base</h3>
+<p class="text-sm text-text-dark/70 dark:text-text-light/70">Selecciona forma, largo y color base de nuestro catálogo.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center border-2 border-primary rounded-full w-16 h-16 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">diamond</span>
+</div>
+<h3 class="text-xl font-serif mb-2 text-text-dark dark:text-text-light">2. Añade Detalles</h3>
+<p class="text-sm text-text-dark/70 dark:text-text-light/70">Personaliza con arte, pedrería y acabados únicos.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center justify-center border-2 border-primary rounded-full w-16 h-16 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
+</div>
+<h3 class="text-xl font-serif mb-2 text-text-dark dark:text-text-light">3. Confirma y Recibe</h3>
+<p class="text-sm text-text-dark/70 dark:text-text-light/70">Recibe tu set personalizado listo para aplicar.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 text-center bg-secondary dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl md:text-4xl font-serif mb-3 text-text-dark dark:text-text-light">Diseña las Uñas de tus Sueños</h2>
+<p class="max-w-2xl mx-auto text-base text-text-dark/70 dark:text-text-light/70 mb-8">Tu visión, nuestra artesanía. Comienza a crear tu set único hoy mismo.</p>
+<a class="inline-block bg-text-dark dark:bg-text-light text-background-light dark:text-background-dark font-semibold py-3 px-8 rounded-full hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all duration-300 text-sm" href="#">Empezar a Personalizar</a>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-xl font-serif text-text-dark dark:text-text-light">ZharaNails</div>
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs tracking-wider text-text-dark/80 dark:text-text-light/80">
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+<a class="hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<div class="flex gap-5 text-text-dark/80 dark:text-text-light/80">
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,128a32,32,0,1,1,32,32A32,32,0,0,1,96,128Zm88,48H160a48.05,48.05,0,0,0-48,48h-8a48.05,48.05,0,0,0-48-48H32V64H224Z" opacity="0"></path><path d="M224,40H32A24,24,0,0,0,8,64V192a24,24,0,0,0,24,24H224a24,24,0,0,0,24-24V64A24,24,0,0,0,224,40Zm8,152a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H224a8,8,0,0,1,8,8ZM96,112a16,16,0,1,0,16,16A16,16,0,0,0,96,112Zm88,48H162.4a32.22,32.22,0,0,0-4.14-14.82,24,24,0,1,1-40.52,0A32.22,32.22,0,0,0,113.6,160H72a8,8,0,0,0,0,16h41.6a48.24,48.24,0,0,1,4.72,16H72a8,8,0,0,0,0,16H184a8,8,0,0,0,0-16Z"></path>
+</svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="mt-8 text-center text-xs text-text-dark/60 dark:text-text-light/60">
+<p>© 2024 ZharaNails. Creado con elegancia. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
